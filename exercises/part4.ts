@@ -1,16 +1,9 @@
-let kilometersToMars: number = 225000000;
-let kilometersToTheMoon: number = 384400;
-
 
 // The variables that are commented out will be moved into the Spacecraft class
 
 
 // This function will also be moved into the Spacecraft class
-function getDaysToLocation(kilometersAway: number): number {
-  let milesAway: number = kilometersAway * this.milesPerKilometer;
-  let hours: number = milesAway / this.speedMph;
-  return hours / 24;
-}
+
 
 // Define your Spacecraft class here:
 
@@ -22,6 +15,11 @@ class Spacecraft {
     constructor(name: string, speedMph: number) {
       this.name = name;
       this.speedMph = speedMph;
+    }
+    function getDaysToLocation(kilometersAway: number): number {
+      let milesAway: number = kilometersAway * this.milesPerKilometer;
+      let hours: number = milesAway / this.speedMph;
+      return hours / 24;
     }
 
 // Create an instance of the class here:
